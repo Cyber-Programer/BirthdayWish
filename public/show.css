@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Meow+Script&display=swap');
+.happy{
+    font-family: "Lexend Exa", sans-serif;
+  }
+  
+  .birthday{
+    font-family: "Meow Script", cursive;
+  }
+  
+  
+  /* Animation */
+  
+  /* Fireworks Animation */
+  .fireworks .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    border-radius: 50%;
+    animation: firework 2s infinite ease-in-out;
+  }
+  
+  .fireworks .firework:nth-child(1) {
+    left: 10%;
+    top: 30%;
+  }
+  
+  .fireworks .firework:nth-child(2) {
+    left: 50%;
+    top: 50%;
+  }
+  
+  .fireworks .firework:nth-child(3) {
+    left: 80%;
+    top: 70%;
+  }
+  
+  @keyframes firework {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Balloons Animation */
+  .balloons .balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    animation: balloonFloat 2s ease-in-out;
+  }
+  
+  .balloons .balloon:nth-child(1) {
+    left: 20%;
+    bottom: -20%;
+  }
+  
+  .balloons .balloon:nth-child(2) {
+    left: 60%;
+    bottom: -10%;
+  }
+  
+  .balloons .balloon:nth-child(3) {
+    left: 80%;
+    bottom: -30%;
+  }
+  
+  @keyframes balloonFloat {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-100px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
+  

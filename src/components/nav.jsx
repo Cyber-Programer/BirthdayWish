@@ -10,21 +10,16 @@ export const Nav = () => {
   const { pathname } = useLocation();
 
   const handleShareClick = () => {
-    if (pathname === "/card") {
-      if (cardData.name !== "click to change all") {
-        const name = encodeURIComponent(cardData.name);
-        const imgurl = encodeURIComponent(cardData.imgurl);
-        const targetUrl = `${window.location.origin}/show?name=${name}&url=${imgurl}`;
-
-        window.open(targetUrl, "_blank");
-      } else {
-        alert("Please Edit The Name And Image By Click On Them");
-      }
+    if (cardData.name !== "click to change all") {
+        let urlIs = `${window.location.origin}/show.html?name=${encodeURIComponent(
+            cardData.name
+        )}&url=${encodeURIComponent(cardData.imgurl)}`;
+        window.open(urlIs);
     } else {
-      alert("First Make A card Then You Can Share It\nRedirecting....");
-      navigate("/card");
+        alert("Please Edit The Name And Image By Clicking On Them");
     }
-  };
+};
+
 
   return (
     <div className=" w-screen fixed top-0 left-0 flex items-center justify-between px-4 py-5  border-2 border-transparent border-b-black bg-blue-100 z-50">

@@ -22,7 +22,8 @@ const Card = () => {
       <div className="w-[98%] h-[400px] relative flex items-center justify-center">
         <div
           className="w-full sm:w-[600px] h-[500px] bg-center bg-cover rounded-lg shadow-lg absolute"
-          style={{ backgroundImage: "url('../../img/birthday.png')" }}
+          style={{ backgroundImage: "url('https://i.postimg.cc/zvL5gChw/birthday.png')" }}
+
         >
           <div className="h-full flex items-center justify-center px-2 py-1 rounded-md">
             <div className="happy-birthday absolute top-[2%] flex flex-col text-4xl z-20">

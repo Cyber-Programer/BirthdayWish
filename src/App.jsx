@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./components/hero";
 import { Nav } from "./components/nav";
-import Show from "./components/show";
+import Show from "./components/xshow";
 import About from "./components/about";
 import Card from "./components/card";
 import CardProvider from "./context/cardContext";

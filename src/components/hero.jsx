@@ -1,4 +1,5 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Hero =()=>{
     return(
@@ -9,7 +10,7 @@ const Hero =()=>{
                 <p className="capitalize text-[15px] sm:text-2xl text-gray-700">using this application you can make custom birthday wish card and share it with many formate</p>
                 <p className="capitalize text-[15px] sm:text-2xl text-gray-700 pt-5">Formate: Direct URL / QR-Code</p>
             </div>
-            <a href="/card" className="bg-blue-400 flex w-fit cursor-pointer mx-auto sm:mx-0 hover:shadow-xl shadow-gray-500 items-center gap-3 px-10  py-2 rounded-3xl font-bold text-gray-800 mt-15">Let's Make <FaLongArrowAltRight/></a>
+            <Link to="/card" className="bg-blue-400 flex w-fit cursor-pointer mx-auto sm:mx-0 hover:shadow-xl shadow-gray-500 items-center gap-3 px-10  py-2 rounded-3xl font-bold text-gray-800 mt-15">Let's Make <FaLongArrowAltRight/></Link>
         </div>
         
     )

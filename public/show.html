@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Birthday Wish</title>
+    <link rel="stylesheet" href="show.css">
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS -->
+    <style>
+        /* Fireworks Animation */
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            animation: fadeOut 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Balloons Animation */
+        .balloons {
+            position: fixed;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            animation: balloonsUp 2s ease-in-out forwards;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        @keyframes balloonsUp {
+            0% { top: 100%; }
+            100% { top: -20%; opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-blue-100 flex flex-col items-center justify-center min-h-screen">
+
+    <!-- Fireworks -->
+    <div class="fireworks">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    </div>
+
+    <!-- Balloons -->
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <div class="w-[98%] h-[400px] relative flex items-center justify-center">
+        <div class="w-full sm:w-[600px] h-[500px] bg-center bg-cover rounded-lg shadow-lg absolute" style="background-image: url('https://i.postimg.cc/zvL5gChw/birthday.png');">
+            <div class="h-full flex items-center justify-center px-2 py-1 rounded-md">
+                <div class="happy-birthday absolute top-[2%] flex flex-col text-4xl z-20">
+                    <span class="uppercase happy">happy</span>
+                    <span class="capitalize birthday font-bold -rotate-9 text-gray-800 text-5xl">
+                        birthday
+                    </span>
+                </div>
+
+                <!-- Image (from URL) -->
+                <img id="userImage"
+                    class="min-w-[300px] w-1/2 bg-center bg-cover rounded-lg bg-white border-3 px-5 pt-5 pb-20 absolute top-[20%] z-10"
+                    alt="userimg" />
+
+                <!-- Name -->
+                <div id="userName"
+                    class="z-30 text-5xl font-light birthday bottom-[13%] absolute text-center">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Extract query parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name') || "Name not provided";
+        const imageUrl = urlParams.get('url') || "https://avatars.githubusercontent.com/u/125746506?v=4";
+
+        // Set image and name
+        document.getElementById('userImage').src = decodeURIComponent(imageUrl);
+        document.getElementById('userName').textContent = decodeURIComponent(name);
+    </script>
+
+</body>
+</html>
