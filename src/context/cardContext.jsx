@@ -4,7 +4,7 @@ export const cardContext = createContext()
 
 const CardProvider = ({children})=>{
     const [name, setName] = useState('click to change all')
-    const [imgurl, setImgurl] = useState('https://avatars.githubusercontent.com/u/125746506?v=4')
+    const [imgurl, setImgurl] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYZxHi8puv-4pu0Gg_WFqCbX4xRYgWVTpKGg&s')
 
 
     return (

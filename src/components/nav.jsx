@@ -17,6 +17,7 @@ export const Nav = () => {
         window.open(urlIs);
     } else {
         alert("Please Edit The Name And Image By Clicking On Them");
+        navigate('/card')
     }
 };
 
